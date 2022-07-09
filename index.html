@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style_countdown.css">
   
 </head>
-
-<p id = "months" ></p>
+<p id = "demo"></p>
+<p id = "months"></p>
 <p>love, ben <3</p>
 
 <script>
@@ -32,10 +32,18 @@ var x = setInterval(function() {
   months = months.toFixed(2);
 
   // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s ";
 
-  document.getElementById("months").innerHTML = months + " months until I am there :)"
+  if (months > 1) {
+    document.getElementById("months").innerHTML = months + " months until I am there :)"
+  }
+  else {
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + "until i am there :)";
+
+  }
+
+
+  
 
   // If the count down is finished, write some text
   if (distance < 0) {
