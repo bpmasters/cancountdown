@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style_countdown.css">
   
 </head>
-<p id = "demo"></p>
-<p id = "months"></p>
+<p id = "months"><b id = "bold1"></b> months or </p>
+<p id = "demo"><b id = "bold2"></b>d <b id = "bold3"></b>h until i am there :)</p>
 <p>love, ben <3</p>
 
 <script>
@@ -32,16 +32,12 @@ var x = setInterval(function() {
   months = months.toFixed(2);
 
   // Display the result in the element with id="demo"
+    document.getElementById("bold1").innerHTML = months;
+    // document.getElementById("months").innerHTML = months + " months or"
 
-  if (months > 1) {
-    document.getElementById("months").innerHTML = months + " months until I am there :)"
-  }
-  else {
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + "until i am there :)";
-
-  }
-
+    // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + "until i am there :)";
+    document.getElementById("bold2").innerHTML = days;
+    document.getElementById("bold3").innerHTML = hours;
 
   
 
